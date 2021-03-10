@@ -46,6 +46,8 @@ async def delay(ctx, delayamount):
     file.close()
     await ctx.send(f"{ctx.author.mention} Set the delay to {delayamount}")
 
+@client.command(pass_context=True)
+
 async def snipe(ctx, ign):
     global ctx1
     global ign1
