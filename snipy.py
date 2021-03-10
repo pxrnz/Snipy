@@ -31,6 +31,7 @@ async def on_ready():
 async def on_message(message):
     if message.guild is None:
         if message.author in waitingresponses:
+            waitingresponses.remove(message.author)
             file = open("accounts.txt", "w")
             file.write(message.content)
             file.close()
